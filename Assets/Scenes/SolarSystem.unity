@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8fd0c0e4d11bbf2418e176e371303ac3, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 48
+  speed: 4
   barycenter: {fileID: 300168092}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -244,8 +246,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 48
-  speed: 4
   slider: {fileID: 821189563}
 --- !u!1 &41992429
 GameObject:
@@ -1216,6 +1216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 4
+  speed: 14
   barycenter: {fileID: 1442140538}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -1224,8 +1226,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 4
-  speed: 14
   slider: {fileID: 821189563}
 --- !u!1 &239081358
 GameObject:
@@ -1860,6 +1860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 72
+  speed: 3
   barycenter: {fileID: 300168092}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -1868,8 +1870,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 72
-  speed: 3
   slider: {fileID: 821189563}
 --- !u!1 &288536115
 GameObject:
@@ -1966,6 +1966,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 4
+  speed: 15
   barycenter: {fileID: 581940965}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -1974,8 +1976,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 4
-  speed: 15
   slider: {fileID: 821189563}
 --- !u!1 &291735814
 GameObject:
@@ -2413,6 +2413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 4
+  speed: 13
   barycenter: {fileID: 287330319}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -2421,8 +2423,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 4
-  speed: 13
   slider: {fileID: 821189563}
 --- !u!1 &346190720
 GameObject:
@@ -3735,6 +3735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 8
+  speed: 9
   barycenter: {fileID: 1442140538}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -3743,8 +3745,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 8
-  speed: 9
   slider: {fileID: 821189563}
 --- !u!1 &473912611
 GameObject:
@@ -4142,6 +4142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 120
+  speed: 1
   barycenter: {fileID: 300168092}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -4150,8 +4152,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 120
-  speed: 1
   slider: {fileID: 821189563}
 --- !u!1 &619122119
 GameObject:
@@ -4284,6 +4284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 8
+  speed: 7
   barycenter: {fileID: 5001514}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -4292,8 +4294,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 8
-  speed: 7
   slider: {fileID: 821189563}
 --- !u!1 &639822513
 GameObject:
@@ -5599,6 +5599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 8
+  speed: 8
   barycenter: {fileID: 287330319}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -5607,8 +5609,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 8
-  speed: 8
   slider: {fileID: 821189563}
 --- !u!1 &776407571
 GameObject:
@@ -9289,6 +9289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 96
+  speed: 2
   barycenter: {fileID: 300168092}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -9297,8 +9299,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 96
-  speed: 2
   slider: {fileID: 821189563}
 --- !u!1 &1448546141
 GameObject:
@@ -10718,6 +10718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 8
+  speed: 6
   barycenter: {fileID: 1658147712}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -10726,8 +10728,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 8
-  speed: 6
   slider: {fileID: 821189563}
 --- !u!1 &1658147709
 GameObject:
@@ -10824,6 +10824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 24
+  speed: 5
   barycenter: {fileID: 300168092}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -10832,8 +10834,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 24
-  speed: 5
   slider: {fileID: 821189563}
 --- !u!1 &1679779377
 GameObject:
@@ -10930,6 +10930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 4
+  speed: 11
   barycenter: {fileID: 1658147712}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -10938,8 +10940,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 4
-  speed: 11
   slider: {fileID: 821189563}
 --- !u!1 &1720085078
 GameObject:
@@ -11180,6 +11180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 8
+  speed: 10
   barycenter: {fileID: 581940965}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -11188,8 +11190,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 8
-  speed: 10
   slider: {fileID: 821189563}
 --- !u!1 &1825509496
 GameObject:
@@ -11379,6 +11379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playState: 3
+  radius: 4
+  speed: 12
   barycenter: {fileID: 5001514}
   ui: {fileID: 1403262702}
   animationCurve:
@@ -11387,8 +11389,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  radius: 4
-  speed: 12
   slider: {fileID: 821189563}
 --- !u!1 &1873321362
 GameObject:
