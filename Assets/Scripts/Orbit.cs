@@ -35,7 +35,11 @@ public class Orbit : MonoBehaviour
 
             case 1: // Rewind
                 playhead -= Time.deltaTime*2;
-                transform.Rotate(0, (183960 - (26280 * speed)) * -2, 0, Space.Self);
+                if (playhead <= 0)
+                {
+                    playhead = 0;
+                }
+                transform.Rotate(0, -6 * speed, 0, Space.Self);
                 break;
 
             case 2: // Pause
@@ -43,16 +47,24 @@ public class Orbit : MonoBehaviour
 
             case 3: // Play
                 playhead += Time.deltaTime;
-                transform.Rotate(0, ((183960 - (26280 * speed))), 0, Space.Self);
+                if (playhead >= 60)
+                {
+                    playhead = 60;
+                }
+                transform.Rotate(0, 3 * speed, 0, Space.Self);
                 break;
 
             case 4: // Fast Forward
                 playhead += Time.deltaTime * 2;
-                transform.Rotate(0, (183960 - (26280 * speed)) * 2, 0, Space.Self);
+                if (playhead >= 60)
+                {
+                    playhead = 60;
+                }
+                transform.Rotate(0, 6 * speed, 0, Space.Self);
                 break;
 
             case 5: // Skip to End
-                playhead = 1;
+                playhead = 60;
                 break;
         }
         // The amount of time passed is recorded.

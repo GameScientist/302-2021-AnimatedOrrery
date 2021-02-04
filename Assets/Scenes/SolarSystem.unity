@@ -985,8 +985,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Amun Galaxy has only been discoverd three days ago, so the national
-    space federation is still conducting on research on each planet's characteristics.
+  m_Text: The central star of the Amun Galaxy, Ra. Similar to the sun of the Milky
+    Way, it is large enough and warm enough to sustain life on other planets.
 --- !u!222 &119194566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12893,7 +12893,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7a71b6dd696f0e94a91c1430002ea99e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
