@@ -8,10 +8,8 @@ using UnityEngine.UI;
 public class Orbit : MonoBehaviour
 {
     // Variables
-    [Range(0, 1)] private float percent = 0; // Represents the current position of the cursor within the timeline.
 
-    public int playState = 3;
-    private float cycleLength = 60;
+    [Range(-1, 1)] private float playSpeed = 0;
     private float playhead = 0;
     private float orbitAge = 0;
     public float radius; // How far away an object is from the center of the screen.
@@ -24,68 +22,33 @@ public class Orbit : MonoBehaviour
 
     public Slider slider;
 
+    void Start()
+    {
+        playhead = Random.Range(-360, 360);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        switch (ui.playState) // The passage of time is determined by the script's play state.
-        {
-            case 0: // Skip to Start
-                playhead = 0;
-                break;
-
-            case 1: // Rewind
-                playhead -= Time.deltaTime*2;
-                if (playhead <= 0)
-                {
-                    playhead = 0;
-                }
-                transform.Rotate(0, -6 * speed, 0, Space.Self);
-                break;
-
-            case 2: // Pause
-                break;
-
-            case 3: // Play
-                playhead += Time.deltaTime;
-                if (playhead >= 60)
-                {
-                    playhead = 60;
-                }
-                transform.Rotate(0, 3 * speed, 0, Space.Self);
-                break;
-
-            case 4: // Fast Forward
-                playhead += Time.deltaTime * 2;
-                if (playhead >= 60)
-                {
-                    playhead = 60;
-                }
-                transform.Rotate(0, 6 * speed, 0, Space.Self);
-                break;
-
-            case 5: // Skip to End
-                playhead = 60;
-                break;
-        }
+        playhead += Time.deltaTime * playSpeed;
         // The amount of time passed is recorded.
-        percent = playhead / cycleLength;
-        percent = Mathf.Clamp(percent, 0, 1);
-        UpdatePosition(percent);
-        // Percent must be between 0% and 100%.
-        if (percent <= 0) percent = 0;
-        if (percent >= 1) percent = 1;
-        slider.SetValueWithoutNotify(percent);
+        UpdatePosition(playhead);
     }
 
-    public void UpdatePosition(float percent)
+    public void UpdatePosition(float playhead)
     {
         // Spins the object around an orbit and rotates it along its axis over a period of sixty seconds.
         // The begining and end positions are the same, creating a loop.
-        orbitAge = percent * speed * 2 * Mathf.PI;
+        orbitAge = (playhead * speed);
         Vector3 offset = new Vector3();
         offset.x = Mathf.Sin(orbitAge) * radius;
         offset.z = Mathf.Cos(orbitAge) * radius;
         transform.position = barycenter.position + offset;
+    }
+
+    public void ChangePlaySpeed(float value)
+    {
+        playSpeed = value;
     }
 }
 // Orbits
