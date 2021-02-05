@@ -10,7 +10,7 @@ public class Orbit : MonoBehaviour
     // Variables
 
     [Range(-1, 1)] private float playSpeed = 0;
-    private float playhead = 0;
+    private float angle = 0;
     private float orbitAge = 0;
     public float radius; // How far away an object is from the center of the screen.
     public float speed; // How many times an object will spin over the span of a minute.
@@ -24,15 +24,15 @@ public class Orbit : MonoBehaviour
 
     void Start()
     {
-        playhead = Random.Range(-360, 360);
+        angle = Random.Range(-360, 360);
     }
 
     // Update is called once per frame
     void Update()
     {
-        playhead += Time.deltaTime * playSpeed;
+        angle += Time.deltaTime * playSpeed;
         // The amount of time passed is recorded.
-        UpdatePosition(playhead);
+        UpdatePosition(angle);
     }
 
     public void UpdatePosition(float playhead)
